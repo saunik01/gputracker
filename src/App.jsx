@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [gpus, setGpus] = useState([
+    { name: "NVIDIA RTX 4070", price: "649€", store: "Jimms.fi" },
+    { name: "AMD RX 7800 XT", price: "579€", store: "Verkkokauppa.com" },
+    { name: "Intel Arc A770", price: "399€", store: "Proshop.fi" }
+  ]);
+
+  function refreshPrices() {
+    // Simulate refreshing prices (in future you would fetch real prices here!)
+    const updatedGpus = [
+      { name: "NVIDIA RTX 4070", price: "639€", store: "Jimms.fi" },
+      { name: "AMD RX 7800 XT", price: "569€", store: "Verkkokauppa.com" },
+      { name: "Intel Arc A770", price: "389€", store: "Proshop.fi" }
+    ];
+    setGpus(updatedGpus);
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <h1>🇫🇮 GPU Price Tracker</h1>
+      <button onClick={refreshPrices}>🔄 Refresh Prices</button>
+      <ul>
+        {gpus.map((gpu, index) => (
+          <li key={index}>
+            <strong>{gpu.name}</strong> - {gpu.price} ({gpu.store})
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default App
+export default App;
