@@ -5,7 +5,10 @@ function App() {
   const [gpus, setGpus] = useState([
     { name: 'NVIDIA RTX 4070', price: '639€', shop: 'Jimm\'s.fi' },
     { name: 'AMD RX 7800 XT', price: '569€', shop: 'Verkkokauppa.com' },
-    { name: 'Intel Arc A770', price: '389€', shop: 'Proshop.fi' }
+    { name: 'Intel Arc A770', price: '389€', shop: 'Proshop.fi' },
+    { name: 'NVIDIA RTX 4060 Ti', price: '459€', shop: 'Jimms.fi' },
+    { name: 'AMD RX 7900 XTX', price: '969€', shop: 'Multitronic.fi' },
+    { name: 'NVIDIA RTX 4080 Super', price: '1229€', shop: 'Gigantti.fi' }
   ]);
 
   const refreshPrices = () => {
