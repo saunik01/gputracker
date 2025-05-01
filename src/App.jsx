@@ -3,12 +3,12 @@ import './App.css';
 
 function App() {
   const [gpus, setGpus] = useState([
-    { name: 'NVIDIA RTX 4070', price: '639€', shop: 'Jimm\'s.fi' },
-    { name: 'AMD RX 7800 XT', price: '569€', shop: 'Verkkokauppa.com' },
-    { name: 'Intel Arc A770', price: '389€', shop: 'Proshop.fi' },
-    { name: 'NVIDIA RTX 4060 Ti', price: '459€', shop: 'Jimms.fi' },
-    { name: 'AMD RX 7900 XTX', price: '969€', shop: 'Multitronic.fi' },
-    { name: 'NVIDIA RTX 4080 Super', price: '1229€', shop: 'Gigantti.fi' }
+    { name: 'NVIDIA RTX 4070', price: '579,99€', shop: 'verkkokauppa.com' },
+    { name: 'AMD RX 7800 XT', price: '538,90€', shop: 'multitronic.fi' },
+    { name: 'Intel Arc A770', price: '339,00€', shop: 'Jimms.fi' },
+    { name: 'NVIDIA RTX 4060 Ti', price: '414,00€', shop: 'multitronic.fi' },
+    { name: 'AMD RX 7900 XTX', price: '929,90€', shop: 'Jimms.fi' },
+    { name: 'NVIDIA RTX 4080 Super', price: '1249,00€', shop: 'verkkokauppa.com' }
   ]);
 
   const refreshPrices = () => {
@@ -18,9 +18,12 @@ function App() {
 
   return (
     <div className="container">
-      <h1>🇫🇮 GPU Price Tracker</h1>
+      <h1 className="main-header">
+        🇫🇮 Näytönohjainten Hintavertailu: Jimm's, Verkkokauppa & Multitronic
+      </h1>
+
       <button className="refresh-button" onClick={refreshPrices}>
-        🔄 Refresh Prices
+        🔄 Päivitä Hinnat
       </button>
 
       <div className="cards">
