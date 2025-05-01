@@ -1,7 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #1a1a1a, #333);
+  background: 
+    linear-gradient(135deg, #1a1a1a, #333),
+    url("https://www.transparenttextures.com/patterns/basketball.png");
+  background-blend-mode: overlay;
+  background-repeat: repeat;
   color: white;
   font-family: 'Poppins', sans-serif;
   height: 100vh;
